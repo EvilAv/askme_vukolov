@@ -1,0 +1,23 @@
+{% extends 'inc\base.html' %}
+{% load static %}
+
+
+{% block content %}
+        {% include 'inc/main_question.html' %}
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 answer_list ">
+            {% for answer in answers %}
+              {% include 'inc/answer.html' %}
+            {% endfor %}
+            </div>
+            <div class="mb-3 your_answer">
+              <textarea class="form-control" id="input_question" rows="5" placeholder="Enter your answer, if you dare..."></textarea>
+            </div>
+          </div>
+          <button type="button" class="btn btn-success btn-answer">Answer</button>
+{% endblock %}
+
+{% block slider %}
+    {% include 'inc/slider.html' %}
+{% endblock %}

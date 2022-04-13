@@ -1,0 +1,18 @@
+{% extends 'inc\base.html' %}
+{% load static %}
+
+
+{% block content %}
+        <h1 class="mt-5">Tag: SQL</h1>
+        <div class="question_list">
+
+          {% for question in questions %}
+            {% include 'inc/question.html' %}
+          {% endfor %}
+
+        </div>
+{% endblock %}
+
+{% block slider %}
+    {% include 'inc/slider.html' %}
+{% endblock %}
